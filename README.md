@@ -1,16 +1,42 @@
-# newsapp
+# Newsapp
 
-A new Flutter project.
+Online News App by using NewsApi.
 
-## Getting Started
+## Working of App
 
-This project is a starting point for a Flutter application.
+This project is a NewsaApp.
 
-A few resources to get you started if this is your first Flutter project:
+The NewsApp App's functionalities are as follows:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1) The objective of this project is to design and develop a mobile application that allows users to search for headlines of different countries.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2) The app includes a search bar at the top where users can input their query for news.
+
+3) It displays the search results in a format of Scroll where we scroll vertical for more news.
+
+4) On scrolling, more news appear.
+
+5) It also find news based on categories."
+
+- [Source Site of NewsApi](https://newsapi.org/)
+- [NewsApi API Get Started](https://newsapi.org/docs/get-started)
+
+
+# Requirements
+- Any Operating System (ie. MacOS X, Linux, Windows)
+- Any IDE with Flutter SDK installed (ie. IntelliJ, Android Studio, VSCode etc)
+- Api Key of Pexels <https://newsapi.org/>
+- And Knowledge of Flutter
+
+# Getting Started
+- Clone the project
+- Add Api keys into file [news.dart](./lib/resources/news.dart) at `ApiKey`.
+- Before runnning the application, run the following command:
+  ```
+  flutter pub get
+  ```
+- Then run the project with the following command:
+  ```
+  flutter run
+  ```
+ 
