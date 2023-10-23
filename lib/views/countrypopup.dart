@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/models/modellprovider.dart';
-import 'package:newsapp/resource/sourcd.dart';
+import 'package:newsapp/resources/sourcd.dart';
 import 'package:provider/provider.dart';
 
 class PopUpDialog extends StatelessWidget {

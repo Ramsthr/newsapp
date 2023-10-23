@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/models/article_model.dart';
 import 'package:newsapp/models/category_model.dart';
-import 'package:newsapp/resource/data.dart';
-import 'package:newsapp/resource/news.dart';
-import 'package:newsapp/resource/sourcd.dart';
+import 'package:newsapp/resources/data.dart';
+import 'package:newsapp/resources/news.dart';
+import 'package:newsapp/resources/sourcd.dart';
 
 class ModelProvider with ChangeNotifier {
   int _x = 23;

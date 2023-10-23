@@ -23,31 +23,32 @@ class News {
       link =
           "$url?country=$countrycode&q=$search&category=$category&apiKey=$apiKey";
     }
-
     news = [];
     print(link);
-    http.Response response = await http.get(Uri.parse(link));
-    var jsonData = jsonDecode(response.body);
-    if (jsonData['status'] == "ok") {
-      jsonData['articles'].forEach(
-        (element) {
-          if (element["urlToImage"] != null &&
-              element["description"] != null &&
-              element['content'] != null &&
-              element['author'] != null) {
-            ArticleModel articleModel = ArticleModel(
-              author: element['author'],
-              title: element['title'],
-              description: element['description'],
-              url: element['url'],
-              urlToImage: element['urlToImage'],
-              content: element['content'],
-              publishedAt: element['publishedAt'],
-            );
-            news.add(articleModel);
-          }
-        },
-      );
-    }
+    try {
+      http.Response response = await http.get(Uri.parse(link));
+      var jsonData = jsonDecode(response.body);
+      if (jsonData['status'] == "ok") {
+        jsonData['articles'].forEach(
+          (element) {
+            if (element["urlToImage"] != null &&
+                element["description"] != null &&
+                element['content'] != null &&
+                element['author'] != null) {
+              ArticleModel articleModel = ArticleModel(
+                author: element['author'],
+                title: element['title'],
+                description: element['description'],
+                url: element['url'],
+                urlToImage: element['urlToImage'],
+                content: element['content'],
+                publishedAt: element['publishedAt'],
+              );
+              news.add(articleModel);
+            }
+          },
+        );
+      }
+    } catch (e) {}
   }
 }

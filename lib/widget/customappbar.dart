@@ -48,35 +48,17 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             return const [
               PopupMenuItem<int>(
                 value: 0,
-                child: Text("Language"),
-              ),
-              PopupMenuItem<int>(
-                value: 1,
-                child: Text("Settings"),
-              ),
-              PopupMenuItem<int>(
-                value: 2,
-                child: Text("Logout"),
+                child: Text("Country"),
               ),
             ];
           },
           onSelected: (value) {
             if (value == 0) {
-              var snackBar = SnackBar(
-                  content: Center(
-                child: Container(
-                  child: Text("dsfsddssdsv"),
-                ),
-              ));
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
-            } else if (value == 1) {
               showDialog(
                   context: context,
                   builder: (context) {
                     return const PopUpDialog();
                   });
-            } else if (value == 2) {
-              print("Logout menu is selected.");
             }
           },
         ),
